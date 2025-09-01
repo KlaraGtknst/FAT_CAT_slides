@@ -6,5 +6,9 @@
 *.bcf
 *.nav
 *.xml
+*.log
+*.out
+*.blg
+*.toc
 *.snm
 *.pdf
