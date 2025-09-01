@@ -47,7 +47,8 @@
     \node[concept, below=15mm of n19] (n30) {};
 
     % Single bottom node
-    \node[concept] (n31) at ($(n22)!0.5!(n30) - (0,15mm)$) {};
+    \node[concept] (n31) at ($ (n22)!0.5!(n30) + (0,-15mm) $) {};
+    % \node[concept] (n31) at ($(n22)!0.5!(n30) - (0,15mm)$) {};
     % \node[concept, below=15mm of $(n22)!0.5!(n30)$] (n31) {};
 
     % Draw downward edges only
@@ -55,8 +56,7 @@
         n0/n1, n0/n2, n0/n3,
         n1/n4, n1/n5, n2/n6, n2/n7, n3/n8, n3/n9,
         n4/n10, n4/n11, n5/n12, n5/n13, n6/n14, n6/n15, n7/n16, n7/n17, n8/n18, n8/n19, n9/n20, 
-        n10/n22, n11/n25, n12/n23, n13/n28, n14/n24, n15/n22, n16/n25, n17/n29, n18/n26, n19/n30, n20/n27,
-    }
+        n10/n22, n11/n25, n12/n23, n13/n28, n14/n24, n15/n22, n16/n25, n17/n29, n18/n26, n19/n30, n20/n27}
     {
         \draw (\from) -- (\to);
     }
@@ -120,7 +120,8 @@
     \node[concept, below=15mm of n19] (n30) {};
 
     % Single bottom node
-    \node[concept] (n31) at ($(n22)!0.5!(n30) - (0,15mm)$) {};
+    \node[concept] (n31) at ($ (n22)!0.5!(n30) + (0,-15mm) $) {};
+    % \node[concept] (n31) at ($(n22)!0.5!(n30) - (0,15mm)$) {};
     % \node[concept, below=15mm of $(n22)!0.5!(n30)$] (n31) {};
 
     % Draw downward edges only
@@ -128,8 +129,7 @@
         n0/n1, n0/n2, n0/n3,
         n1/n4, n1/n5, n2/n6, n2/n7, n3/n8, n3/n9,
         n4/n10, n4/n11, n5/n12, n5/n13, n6/n14, n6/n15, n7/n16, n7/n17, n8/n18, n8/n19, n9/n20, 
-        n10/n22, n11/n25, n12/n23, n13/n28, n14/n24, n15/n22, n16/n25, n17/n29, n18/n26, n19/n30, n20/n27,
-    }
+        n10/n22, n11/n25, n12/n23, n13/n28, n14/n24, n15/n22, n16/n25, n17/n29, n18/n26, n19/n30, n20/n27}
     {
         \draw (\from) -- (\to);
     }
@@ -149,7 +149,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{TITANIC~\citep{titanic_2002}}
+\begin{frame}{TITANIC~\cite{titanic_2002}}
 \begin{columns}
 \begin{column}{0.7\textwidth}
 \begin{alertblock}{Problem} % with large datasets
@@ -197,7 +197,7 @@ The size of a concept lattice can grow exponentially with respect to the size of
 \end{frame}
 
 
-\begin{frame}{TITANIC~\citep{titanic_2002}}
+\begin{frame}{TITANIC~\cite{titanic_2002}}
 \begin{definition}
 Support $supp(B) = \frac{\left| B' \right|}{\left| G \right|}$
 \end{definition}
@@ -211,7 +211,7 @@ Support $supp(B) = \frac{\left| B' \right|}{\left| G \right|}$
 
 \end{frame}
 
-\begin{frame}{TITANIC~\citep{titanic_2002}}
+\begin{frame}{TITANIC~\cite{titanic_2002}}
 \begin{columns}
     \begin{column}{0.7\textwidth}
         \begin{definition}
