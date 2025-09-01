@@ -1,19 +1,79 @@
 \section{Prior Work}
-    \begin{frame}{Prior Work}
+
+\begin{frame}{Selection of Prior Work}
     Assuming we work on data structured in directories.
     \begin{itemize}
         \item<2-> Topic models (LDA, BERTopic, and Top2Vec)
         \begin{itemize}
             \item[$\checkmark$]<3-> Topic identification
-            \item[$\times$]<3-> Homogeneous dataset
             \item[$\times$]<3-> Do not leverage intrinsic hierarchical structure of documents
         \end{itemize}
-        \item<4-> Representation of document-topic relations using a concept lattice~\cite{topic_modeling_2024}
+
+        \item<4-> \acs{fca} on Twitter data~\cite{twitter_fca_2016}
         \begin{itemize}
-            \item[$\checkmark$]<5-> Hierarchical representation
-            \item[$\times$]<5-> Homogeneous dataset
-            \item[$\times$]<5-> Exclusively textual data
-            \item[$\times$]<5-> Lacks ability to aggregate information 
+            \item[$\checkmark$]<5-> Support frequency thresholds 
+            \item[$\times$]<5-> Term frequency rather than semantics
         \end{itemize}
+      
     \end{itemize}
 \end{frame}
+
+
+
+\begin{frame}{Prior Work}
+    
+    \begin{itemize}
+   
+        \item<1-> Representation of document-topic relations using a concept lattice~\cite{topic_modeling_2024}
+        \begin{itemize}
+            \item[$\checkmark$]<3-> Hierarchical representation
+            \item[$\checkmark$]<3-> Excluding low support items
+            \item[$\times$]<3-> Homogeneous dataset (academic papers on Machine Learning)
+            \item[$\times$]<3-> Exclusively textual data
+            \item[$\times$]<3-> Lacks ability to aggregate information 
+        \end{itemize}
+    \end{itemize}
+
+
+\only<2->{%
+    \centering
+    \begin{minipage}{\textwidth}
+        % --- Document-topic relation ---
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \captionof{table}{Document-topic relation}
+            \label{tab:doc-topic}
+            \resizebox{\linewidth}{!}{%
+                \begin{tabular}{|c|c|c|c|c|}
+                    \hline
+                    \diagbox{Documents}{Topics} & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\ \hline
+                    $d_1$ & $w_{1,1}$ & $w_{1,2}$ & $\cdots$ & $w_{1,n}$ \\ \hline
+                    $d_2$ & $w_{2,1}$ & $w_{2,2}$ & $\cdots$ & $w_{2,n}$ \\ \hline
+                    $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\ \hline
+                    $d_l$ & $w_{l,1}$ & $w_{l,2}$ & $\cdots$ & $w_{l,n}$ \\ \hline
+                \end{tabular}
+            }
+        \end{minipage}%
+        \hfill
+        % --- Term-topic relation ---
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \captionof{table}{Term-topic relation}
+            \label{tab:term-topic}
+            \resizebox{\linewidth}{!}{%
+                \begin{tabular}{|c|c|c|c|c|}
+                    \hline
+                    \diagbox{Terms}{Topics} & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\ \hline
+                    $s_1$ & $\hat{w}_{1,1}$ & $\hat{w}_{1,2}$ & $\cdots$ & $\hat{w}_{1,n}$ \\ \hline
+                    $s_2$ & $\hat{w}_{2,1}$ & $\hat{w}_{2,2}$ & $\cdots$ & $\hat{w}_{2,n}$ \\ \hline
+                    $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\ \hline
+                    $s_l$ & $\hat{w}_{l,1}$ & $\hat{w}_{l,2}$ & $\cdots$ & $\hat{w}_{l,n}$ \\ \hline
+                \end{tabular}
+            }
+        \end{minipage}
+    \end{minipage}%
+}
+
+
+\end{frame}
+
