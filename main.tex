@@ -1,0 +1,130 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage {mathtools}
+\usepackage[inkscapeformat=png]{svg}
+\usepackage{utopia} %font utopia imported
+\usetheme{CambridgeUS}
+% \usepackage{fontspec}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc}
+\usetikzlibrary{positioning,arrows.meta,calc}
+% \usepackage{fourier}  % sans serif font
+\renewcommand{\familydefault}{\sfdefault}
+\usecolortheme{dolphin}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{bibliography.bib}
+
+% set colors to University of Kassel colours
+\definecolor{myNewColorA}{RGB}{172,4,76}
+\definecolor{myNewColorB}{RGB}{197,83,132}
+\definecolor{myNewColorC}{RGB}{209,145,173}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{hyperref}
+\usepackage[printonlyused]{acronym}
+% \usepackage[nolist]{acronym}    
+
+
+%------------------------------------------------------------
+\titlegraphic{\includegraphics[height=1.5cm]{images/Logo_Uni_Kassel.png}}
+\newcommand{\university}{University of Kassel}
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+% \setbeamerfont{instituteB}{size=\small}
+\title[\university{}]{Conceptual Topic Aggregation}
+\subtitle{A Case Study on the ETYNTKE Dataset}
+\author[Klara M. Gutekunst]{Klara M. Gutekunst \and Dominik Dürrschnabel \and Gerd Stumme \and Johannes Hirth}
+
+\institute[klara.gutekunst@uni-kassel.de]{\university{}}
+% \instituteB[KDE]{\inst{2}Knowledge and Data Engineering Group
+% Department of Electrical Engineering and Computer Science
+% Interdisciplinary Research Center for Information System Design
+% University of Kassel}
+\date[\today]
+{\today}
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+% \setmainfont{Crimson Pro}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\include{motivation}
+
+\section{Mathematical Foundations}
+% \include{mathematical_foundations/fca}
+% \include{mathematical_foundations/titanic}
+
+\include{topic_modelling}
+
+\section{\acs{fca} Topic Aggregation}
+    \begin{frame}{\acs{fca} Topic Aggregation}
+    Can \acs{fca} tools produce a hierarchical description of the semantic similarities of directories in the dataset?
+    \end{frame}
+
+\section{Everything You Need To Know Ever}
+    \begin{frame}{Everything You Need To Know Ever }
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+    \end{frame}
+
+\section{Conclusion}
+    \begin{frame}{Conclusion}
+    \end{frame}
+
+
+
+\section*{Acknowledgement}  
+\begin{frame}
+\textcolor{myNewColorA}{\Huge{\centerline{Thank you!}}}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\printbibliography
+\end{frame}
+
+\include{acronyms}
+\end{document}
+
+
+

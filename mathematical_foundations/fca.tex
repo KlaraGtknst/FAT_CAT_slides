@@ -1,0 +1,24 @@
+\begin{frame}{\acl{fca} \citep{fca-book}} 
+\begin{itemize}
+    \item Formal context: $\mathbb{K} \coloneq (G, M, I)$
+    \begin{itemize}
+        \item $G$ object set
+        \item $M$ attribute set
+        \item $I \subseteq G \times M$ incidence relation
+    \end{itemize}
+\item Derivation operations:
+\begin{itemize}
+    \item For $A \subseteq G $: $A' \coloneq \{m \in M \mid (g, m) \in I \text{ } \forall g \in A \}$
+    %object derivation $(\cdot)' : \mathcal{P}(G) \to \mathcal{P}(M)$
+    \item For $B \subseteq M $: $B' \coloneq \{g \in G \mid (g, m) \in I \text{ } \forall m \in B\}$
+\end{itemize}
+\item Formal concepts: $\underline{\mathfrak{B}}(\mathbb{K}) \coloneq \{(A,B) | A' = B \land B' = A \}$ 
+\begin{itemize}
+    \item $A \subseteq G$ and $B \subseteq M$
+\end{itemize} 
+\item Concept lattice $\underline{\mathfrak{B}}(\mathbb{K}) \coloneq (\mathfrak{B}(\mathbb{K}), \leq)$ with $(A_1, B_1) \leq (A_2, B_2) \iff A_1 \subseteq A_2$.
+\begin{itemize}
+    \item $A_i \subseteq G$ and $B_i \subseteq M$
+\end{itemize} 
+\end{itemize}
+\end{frame}
