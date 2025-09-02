@@ -83,3 +83,73 @@
     \end{beamercolorbox}
 \end{frame}
 
+\begin{frame}{Deriving the Directory-Topic Concept Lattice}
+    \only<1>{
+    \includegraphics[width=\linewidth]{images/topic_modeling_fca_2rows.pdf}
+    }
+    \visible<2->{Assuming all documents are organized in directories.}
+    \begin{enumerate}
+        \item <2-> Top 10 topics per document incl. relevance scores
+        \item <3-> Compute threshold $\delta$ s.t. document-topic matrix density $< 0.1$
+        \item <4-> $\mathcal{D}_\delta(i,j)=\left\{ \begin{array}{cl}
+                        1 & \ \text{if } \ w_{i,j} \geq \delta, \\
+                        0 & \ \text{else.}
+                    \end{array} \right.$
+        \item <5-> Compute iceberg lattice for each directory
+        \item <6-> Combine frequent topics across directories into directory-topic matrix
+        \item[\rightarrowfill] <7-> Directory-topic context
+    \end{enumerate}
+
+
+    \only<3>{
+        \centering
+        \includesvg[width=0.6\linewidth]{images/Density_of_document_topic_incidence_matrix_altered}
+    }
+
+  \only<4>{
+    \begin{center}
+        \captionof{table}{Document-topic relation $\mathcal{D}_\delta$~\cite{topic_modeling_2024}}
+        \label{tab:doc-topic2}
+        % \resizebox{\linewidth}{!}{%
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                \diagbox{Documents}{Topics} & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\ \hline
+                $d_1$ & $w_{1,1}$ & $w_{1,2}$ & $\cdots$ & $w_{1,n}$ \\ \hline
+                $d_2$ & $w_{2,1}$ & $w_{2,2}$ & $\cdots$ & $w_{2,n}$ \\ \hline
+                $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\ \hline
+                $d_l$ & $w_{l,1}$ & $w_{l,2}$ & $\cdots$ & $w_{l,n}$ \\ \hline
+            \end{tabular}
+        % }
+        \end{center}
+    }
+
+
+    \only<5>{
+        \begin{center}
+            \resizebox{0.25\linewidth}{0.3\textheight}{%
+                \FormalConceptGraphColoured
+            }
+
+            \vspace{0.5em}
+            {\scriptsize Iceberg concept lattice coloured.}
+        \end{center}
+    }
+
+
+    \visible<6>{
+        \begin{table}[t]
+    \centering
+    \caption{Weighted directory-topic relation.
+        The weights $\tilde{w}_{i,j} \in \{0,1\}$ represent whether a topic $t_j$ is present in a directory $\hat{d}_i$.}
+    \label{tab:dir-topic}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \backslashbox{Directories}{Topics} & $t_1$             & $t_2$             &          & $t_n$             \\ \hline
+        $\hat{d}_1$                        & $\tilde{w}_{1,1}$ & $\tilde{w}_{1,2}$ & $\cdots$ & $\tilde{w}_{1,n}$ \\ \hline
+        $\hat{d}_2$                        & $\tilde{w}_{2,1}$ & $\tilde{w}_{2,2}$ & $\cdots$ & $\tilde{w}_{2,n}$ \\ \hline
+        $\vdots$                           & $\vdots$          & $\vdots$          & $\ddots$ & $\vdots$          \\ \hline
+        $\hat{d}_k$                        & $\tilde{w}_{k,1}$ & $\tilde{w}_{k,2}$ & $\cdots$ & $\tilde{w}_{k,n}$ \\ \hline
+    \end{tabular}
+\end{table}
+    }
+\end{frame}
