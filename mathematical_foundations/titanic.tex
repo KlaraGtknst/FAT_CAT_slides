@@ -195,11 +195,15 @@ The size of a concept lattice can grow exponentially with respect to the size of
 Support $supp(B) = \frac{\left| B' \right|}{\left| G \right|}$
 \end{definition}
 
-\begin{itemize}
-    \item<2-> $minsupp \in [0,1]$ denotes minimum support threshold below which attribute sets are not considered frequent
-    \item<3-> $B \subseteq M$ frequent attribute set in $\mathbb{K}$ if $supp(B) \ge minsupp$
-    \item<4-> $(A, B)$ frequent concept if its intent $B$ is frequent attribute set.
-\end{itemize}
+
+\begin{description}
+    \item<2->[minimum support] $minsupp \in [0,1]$: Threshold below which attribute sets are not considered frequent
+    \item <3-> [frequent attribute set] $B \subseteq M$: $supp(B) \ge minsupp$  % in $\mathbb{K}$ if
+    \item <4-> [frequent concept] $(A, B)$: $B$ is frequent attribute set
+\end{description}
+
+    
+
 
 
 \end{frame}
@@ -212,7 +216,9 @@ Support $supp(B) = \frac{\left| B' \right|}{\left| G \right|}$
         \end{definition}
 
         \visible<2->{
-        TITANIC algorithm computes iceberg concept lattices.
+        \begin{description}
+            \item[TITANIC] algorithm computes iceberg concept lattices.
+        \end{description}
         % An iceberg concept lattice includes only the top-level concepts, specifically those corresponding to frequent attribute sets.
         }
     \end{column}
