@@ -12,6 +12,8 @@
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{diagbox} 
+\usepackage[table]{xcolor} % enables \rowcolor, \columncolor in tables
+\usepackage{pifont} % for attention sign 
 \usetikzlibrary{positioning,calc}
 \usetikzlibrary{positioning,arrows.meta,calc}
 % \usepackage{fourier}  % sans serif font
@@ -47,7 +49,7 @@
 \setbeamerfont{institute}{size=\small}
 % \setbeamerfont{instituteB}{size=\small}
 \title[\university{}]{Conceptual Topic Aggregation}
-\subtitle{A Case Study on the ETYNTKE Dataset}
+\subtitle{A Case Study on the \acs{dataset} Dataset}
 \author[Klara M. Gutekunst]{\underline{Klara M. Gutekunst} \and Dominik Dürrschnabel \and Gerd Stumme \and Johannes Hirth}
 
 \institute[klara.gutekunst@uni-kassel.de]{\university{}}
@@ -95,7 +97,7 @@
 
 % \section{Mathematical Foundations}
 % \include{mathematical_foundations/fca}
-\include{mathematical_foundations/titanic}
+% \include{mathematical_foundations/titanic}
 
 % \section{Machine Learning Foundations}
 % \include{ML_foundations/top2vec}
@@ -103,17 +105,10 @@
 % \include{related_work}
 % \include{topic_modelling}
 
-\section{\acs{fca} Topic Aggregation}
-    \begin{frame}{\acs{fca} Topic Aggregation}
-    Can \acs{fca} tools produce a hierarchical description of the semantic similarities of directories in the dataset?
-    \end{frame}
-
 % \include{fat_cat}
+\include{results}
 
-\section{Conclusion}
-    \begin{frame}{Conclusion}
-    \end{frame}
-
+\include{conclusion}
 
 
 \section*{Acknowledgement}  
