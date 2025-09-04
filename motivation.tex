@@ -1,86 +1,46 @@
 \section{Motivation}
-    \begin{frame}{Motivation}
-        \begin{columns}
-            \begin{column}{0.2\textwidth}
-            % \begin{figure}[htbp]
-            %     \centering
-            %     \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/more_data.png}}
-            % \end{figure}
-            \begin{figure}[htbp]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/doc.png}}
-            \end{figure}
-        \end{column}
+\begin{frame}{Motivation} 
+    \only<1>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/motivation/motivation1.svg}
+        \end{figure}
+    }
+    \only<2>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/motivation/motivation2.svg}
+        \end{figure}
+    }
+    \only<3>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/motivation/motivation3.svg}
+        \end{figure}
+    }
+\end{frame}
 
-        \begin{column}{0.2\textwidth}
-            \only<2>{
-            \begin{figure}[t]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/left_arrow_downwards.png}}
-            \end{figure}
-            }
+\begin{frame}{Motivation} 
+    \begin{alertblock}{Problem} 
+    Employees at the tax office often lack prior knowledge about the contents of the data before starting exploration.
+    \end{alertblock}
 
-            \only<3->{
-            \begin{figure}[t]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/error_arrow_downwards.png}}
-            \end{figure}
-            }
+    \visible<2->{What is our objective?\\}
+    \visible<3->{$\rightarrow$ \textbf{Gain an initial understanding of the data.}}
+\end{frame}
 
-            \visible<4->{
-            \begin{figure}[b]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/right_arrow.png}}
-            \end{figure}
-            }
-        \end{column}
-        
 
-        \begin{column}{0.2\textwidth}
-            \visible<2->{
-            \begin{figure}[t]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/lenses.png}}
-            \end{figure}
-            }
+\begin{frame}{Motivation} 
+    \begin{exampleblock}{Objective} 
+    Gain an initial understanding of the data.
+    \end{exampleblock}
 
-            \visible<4->{
-            \begin{figure}[b]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/computer_scientist.png}}
-            \end{figure}
-            }
-        \end{column}
-    
+    \visible<2->{\textbf{Challenges:}}
+    \begin{itemize}
+        \item[\ding{55}]<3-> Lack of labeled data for supervised training
+        \item[\ding{55}]<4-> Diverse data formats and structures
+    \end{itemize}
 
-        \begin{column}{0.2\textwidth}
-            \only<2>{
-            \begin{figure}[t]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/left_arrow_upwards.png}}
-            \end{figure}
-            }
-
-            \only<3->{
-            \begin{figure}[t]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/error_arrow_upwards.png}}
-            \end{figure}
-            }
-
-            \visible<4->{
-            \begin{figure}[b]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/right_arrow_upwards.png}}
-            \end{figure}
-            }
-        \end{column}
-
-        \begin{column}{0.2\textwidth}
-            \begin{figure}[htbp]
-                \centering
-                \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{images/motivation/people.png}}
-            \end{figure}
-            \end{column}
-        \end{columns}
-    \end{frame}
+    \visible<5->{How did we tackle these problems?}
+    \begin{itemize}
+        \item[\ding{51}]<6-> Fully unsupervised analysis pipeline
+        \item[\ding{51}]<7-> Handles multiple languages and file types
+    \end{itemize}
+\end{frame}
