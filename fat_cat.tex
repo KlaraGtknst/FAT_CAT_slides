@@ -50,19 +50,26 @@
 
 \end{frame}
 
-\begin{frame}{\acs{approachname}}
-    \begin{description}
-    \item[\acs{approachname}] \acl{approachname}
-    \end{description}
 
-    Our contributions:
-    \begin{itemize}
-        \uncover<2->{\item Open-source\footnote{\url{https://github.com/KlaraGtknst/text_topic} (29.01.2025) \&\\ \url{https://github.com/KlaraGtknst/clj_exploration_leaks} (29.01.2025)}}
-        \uncover<3->{\item Minimal training requirements}
-        \uncover<4->{\item Non-textual data} % \item[\rightarrowfill]
-        \uncover<5->{\item Information aggregation across directories}       
-    \end{itemize}
+\begin{frame}
+    \begin{figure}
+        \includesvg[width=\linewidth]{images/steps/overview_step3.svg}
+    \end{figure}
 \end{frame}
+
+\begin{frame}{\acs{approachname}}
+    \only<1>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/topic_modeling_fca_2rows.svg}
+        \end{figure}
+    }
+    \only<2>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step1.svg}
+        \end{figure}
+    }
+\end{frame}
+
 
 \begin{frame}{Text Extraction}
     \includesvg[width=\linewidth]{images/extract_text}
@@ -74,24 +81,47 @@
 \end{frame}
 
 
-% \begin{frame}{Text Processing}
-%     \includesvg[width=\linewidth]{images/text_related_workflow}
-%       \vfill
-%     \begin{beamercolorbox}[center, wd=\linewidth, sep=1ex, rounded=true, shadow=true]{block body}
-%         {\small Appendix details: } 
-%         \hyperlink{supp:img_cap}{\beamergotobutton{Image Captioner}}
-%         \hspace{1em}
-%         \hyperlink{supp:sbert}{\beamergotobutton{\acs{sbert}}}
-%     \end{beamercolorbox}
+\begin{frame}{\acs{approachname}}
+    \begin{figure}
+        \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step2.svg}
+    \end{figure}
+\end{frame}
+
+\input{topic_modelling}
+\input{ML_foundations/top2vec}
+
+% \begin{frame}{\acs{approachname}}
+%     \begin{figure}
+%         \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step3.svg}
+%     \end{figure}
 % \end{frame}
 
-\begin{frame}{Deriving the Directory-Topic Concept Lattice}
-    \only<1>{
-    \includegraphics[width=\linewidth]{images/topic_modeling_fca_2rows.pdf}
+\begin{frame}{Directory-Topic Concept Lattice}
+    \begin{textblock*}{3.7cm}(\paperwidth-3.8cm,0.2cm) % width + margin
+        \only<1>{
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step2.svg}
+        }
+        \only<3-4>{
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step3.svg}
+        }
+        \only<5>{
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step4.svg}
+        }
+        \only<6>{
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step5.svg}
+        }
+        \only<7>{
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step6.svg}
+        }
+    \end{textblock*}
+    \only<1,3->{Assuming all documents are organized in directories.}
+    \only<2>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step3.svg}
+        \end{figure}
     }
-    \visible<2->{Assuming all documents are organized in directories.}
     \begin{enumerate}
-        \item <2-> Top 10 topics per document incl. relevance scores
+        \item <1,3-> Top 10 topics per document incl. relevance scores
         \item <3-> Compute threshold $\delta$ s.t. document-topic matrix density $< 0.1$
         \item <4-> $\mathcal{D}_\delta(i,j)=\left\{ \begin{array}{cl}
                         1 & \ \text{if } \ w_{i,j} \geq \delta, \\
@@ -138,7 +168,7 @@
     }
 
 
-    \visible<6>{
+    \only<6>{
         \begin{table}[t]
     \centering
     \caption{Weighted directory-topic relation.

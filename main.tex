@@ -12,6 +12,7 @@
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{diagbox} 
+\usepackage[absolute,overlay]{textpos}
 \usepackage[table]{xcolor} % enables \rowcolor, \columncolor in tables
 \usepackage{pifont} % for attention sign 
 \usetikzlibrary{positioning,calc}
@@ -117,14 +118,13 @@
 %------------------------------------------------------------
 \include{motivation}
 \include{data}
-\include{topic_modelling}
+
 
 \section{Mathematical Foundations}
 \include{mathematical_foundations/fca}
 \include{mathematical_foundations/titanic}
 
-\section{Machine Learning Foundations}
-\include{ML_foundations/top2vec}
+
 
 \include{related_work}
 
