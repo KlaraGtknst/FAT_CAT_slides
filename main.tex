@@ -38,6 +38,24 @@
 \usepackage[printonlyused]{acronym}
 % \usepackage[nolist]{acronym}    
 
+% Progress bar in headline (fixed version)
+\makeatletter
+\setbeamertemplate{headline}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    % Bar height
+    \def\barheight{0.15cm}
+    % Background bar (full width)
+    \fill[myNewColorC] (current page.north west) rectangle 
+                       ([yshift=-\barheight]current page.north east);
+    % Progress bar (partial width)
+    \fill[myNewColorA] (current page.north west) rectangle 
+      ($ (current page.north west) + (\paperwidth*\insertframenumber/\inserttotalframenumber,-\barheight) $);
+  \end{tikzpicture}%
+  \vspace{0.2cm} % Space below the bar
+}
+\makeatother
+
+
 
 %------------------------------------------------------------
 % \titlegraphic{\includegraphics[height=1.5cm]{images/Logo_Uni_Kassel.png}}
@@ -53,7 +71,7 @@
 \setbeamerfont{date}{size=\small}
 \setbeamerfont{institute}{size=\small}
 % \setbeamerfont{instituteB}{size=\small}
-\title[\university{}]{Conceptual Topic Aggregation}
+\title[\university{}]{Conceptual Topic Aggregation (\acs{approachname})}
 \subtitle{A Case Study on the \acs{dataset} Dataset}
 \author[Klara M. Gutekunst]{\underline{Klara M. Gutekunst} \and Dominik Dürrschnabel \and Johannes Hirth \and Gerd Stumme}
 
