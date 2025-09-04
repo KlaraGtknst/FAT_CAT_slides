@@ -5,14 +5,14 @@
     \begin{itemize}
         \item<2-> Topic models (LDA, BERTopic, and Top2Vec)
         \begin{itemize}
-            \item[$\checkmark$]<3-> Topic identification
+            \item[$\checkmark$]<3-> Semantic topics
             \item[$\times$]<3-> Do not leverage intrinsic hierarchical structure of documents
         \end{itemize}
 
         \item<4-> \acs{fca} on Twitter data~\cite{twitter_fca_2016}
         \begin{itemize}
-            \item[$\checkmark$]<5-> Support frequency thresholds 
-            \item[$\times$]<5-> One-hot \ac{bow} encoding rather than semantics
+            \item[$\checkmark$]<5-> Discard high- and low-frequency terms
+            \item[$\times$]<5-> Concepts $\Rightarrow$ topics, but based on one-hot \ac{bow} encoding (not semantics)
         \end{itemize}
       
     \end{itemize}
