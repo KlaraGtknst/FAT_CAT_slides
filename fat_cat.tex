@@ -57,42 +57,50 @@
     \end{figure}
 \end{frame}
 
+
 \begin{frame}{\acs{approachname}}
     \only<1>{
         \begin{figure}
             \includesvg[width=\linewidth]{images/topic_modeling_fca_2rows.svg}
         \end{figure}
     }
-    \only<2>{
+    
+\end{frame}
+
+\subsection{Text Extraction}
+\begin{frame}{Text Extraction}
+    \only<1>{
         \begin{figure}
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step1.svg}
         \end{figure}
     }
+
+    \only<2>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/extract_text}
+            \label{fig:extract_text}
+        \end{figure}
+        \begin{beamercolorbox}[center, wd=\linewidth, sep=1ex, rounded=true, shadow=true]{block body}
+            {\small Appendix details: } 
+            \hyperlink{supp:img_cap}{\beamergotobutton{Image Captioner}}
+        \end{beamercolorbox}
+    }
+        
 \end{frame}
 
-
-\begin{frame}{Text Extraction}
-    \includesvg[width=\linewidth]{images/extract_text}
-    \label{fig:extract_text}
-    \begin{beamercolorbox}[center, wd=\linewidth, sep=1ex, rounded=true, shadow=true]{block body}
-        {\small Appendix details: } 
-        \hyperlink{supp:img_cap}{\beamergotobutton{Image Captioner}}
-    \end{beamercolorbox}
-\end{frame}
-
-
+\subsection{Topic Extraction}
 \begin{frame}{\acs{approachname}}
     \begin{figure}
         \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step2.svg}
     \end{figure}
 \end{frame}
 
-\input{topic_modelling}
+\input{topic_modeling}
 \input{ML_foundations/top2vec}
 
-
+\subsection{Deriving the Directory-Topic Concept Lattice}
 \begin{frame}{Directory-Topic Concept Lattice}
-    \begin{textblock*}{3.7cm}(\paperwidth-3.8cm,0.2cm) % width + margin
+    \begin{textblock*}{3.8cm}(\paperwidth-3.9cm,0.2cm) % width + margin
         \only<1>{
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step2.svg}
         }
@@ -148,7 +156,7 @@
 \input{mathematical_foundations/titanic}
 
 \begin{frame}{Directory-Topic Concept Lattice}
-    \begin{textblock*}{3.7cm}(\paperwidth-3.8cm,0.2cm) % width + margin
+    \begin{textblock*}{3.8cm}(\paperwidth-3.9cm,0.2cm) % width + margin
         \only<1>{
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step4.svg}
         }
