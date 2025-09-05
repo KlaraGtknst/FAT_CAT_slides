@@ -100,31 +100,36 @@
 
 \subsection{Deriving the Directory-Topic Concept Lattice}
 \begin{frame}{Directory-Topic Concept Lattice}
-    \begin{textblock*}{3.8cm}(\paperwidth-3.9cm,0.2cm) % width + margin
+    \begin{textblock*}{4cm}(\paperwidth-4.1cm,0.2cm) % width + margin
         \only<1>{
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step2.svg}
         }
         \only<3-4>{
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step3.svg}
         }
-        \only<5>{
-            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step4.svg}
-        }
+        % \only<5>{
+        %     \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step4.svg}
+        % }
     \end{textblock*}
-    \only<1,3->{Assuming all documents are organized in directories.}
+    \only<1,3,4>{Assuming all documents are organized in directories.}
     \only<2>{
         \begin{figure}
             \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step3.svg}
         \end{figure}
     }
+    \only<5>{
+        \begin{figure}
+            \includesvg[width=\linewidth]{images/steps_detail/topic_modeling_fca_2rows_step4.svg}
+        \end{figure}
+    }
     \begin{enumerate}
-        \item <1,3-> Top 10 topics per document incl. relevance scores
-        \item <3-> Compute threshold $\delta$ s.t. document-topic matrix density $< 0.1$
-        \item <4-> $\mathcal{D}_\delta(i,j)=\left\{ \begin{array}{cl}
+        \item <1,3-4> Top 10 topics per document incl. relevance scores
+        \item <3-4> Compute threshold $\delta$ s.t. document-topic matrix density $< 0.1$
+        \item <4> $\mathcal{D}_\delta(i,j)=\left\{ \begin{array}{cl}
                         1 & \ \text{if } \ w_{i,j} \geq \delta, \\
                         0 & \ \text{else.}
                     \end{array} \right.$
-        \item <5-> Compute iceberg lattice for each directory
+        % \item <5-> Compute iceberg lattice for each directory
     \end{enumerate}
 
     \only<3>{
