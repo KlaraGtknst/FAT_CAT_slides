@@ -8,11 +8,36 @@
 
     Our contributions:
     \begin{itemize}
-        \uncover<2->{\item Open-source\footnote{\url{https://github.com/KlaraGtknst/text_topic} (29.01.2025) \&\\ \url{https://github.com/KlaraGtknst/clj_exploration_leaks} (29.01.2025)}}
-        \uncover<3->{\item Minimal training requirements}
-        \uncover<4->{\item Non-textual data} % \item[\rightarrowfill]
-        \uncover<5->{\item Information aggregation across directories}       
+        \item Open-source\footnote{\url{https://github.com/KlaraGtknst/text_topic} (29.01.2025) \&\\ \url{https://github.com/KlaraGtknst/clj_exploration_leaks} (29.01.2025)}
+        \item Minimal training requirements
+        \item Non-textual data
+        \item Information aggregation across directories      
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Content of \texttt{Military} directory}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{images/data_screenshots/military.png}
+        \caption{Screenshot of content of \texttt{Military} directory.}
+        \label{fig:military_dir_content}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Content of \texttt{Business} directory}
+    \only<1> {
+        \begin{figure}
+            \includegraphics[width=\textwidth]{images/data_screenshots/business.png}
+            \caption{Screenshot of content of \texttt{Business} directory.}
+            \label{fig:business_dir_content}
+        \end{figure}
+    }
+    \only<2> {
+        \begin{figure}
+            \includesvg[width=0.9\textwidth]{images/data_screenshots/wordcloud_Business.svg}
+            \caption{Wordcloud\footnote{\url{https://github.com/amueller/word_cloud} (01.02.2025)} of content of \texttt{Business} directory.}
+            \label{fig:business_dir_content_wordcloud}
+        \end{figure}
+    }
 \end{frame}
 
 \begin{frame}{Text Processing}
